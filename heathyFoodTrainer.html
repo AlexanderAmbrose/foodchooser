@@ -1,0 +1,56 @@
+<html>
+    <head>
+      <link rel = "stylesheet" href="StyleSheet2.css">
+      <script>
+         function ageCheck()
+         {
+                var y = document.getElementById("byear").value;
+                var x = 2021 - y;
+                if (x == 0) {
+                  alert("Error to young");
+                }
+                else if (x >= 200)
+                  {
+                    alert("Error to old");
+                  }
+                else if (x <= 10)
+                {
+                    document.getElementById("pic1").innerHTML ="<img src='chickenStrips.jpg' width='250' height='300' onclick = 'printNo()'>"
+                    document.getElementById("pic2").innerHTML ="<img src='FrenchFries.jpg' width='250' height='300' onclick = 'printNo()'>"
+                    document.getElementById("pic3").innerHTML ="<img src='appels.jpg' width='250' height='300' onclick = 'printYes()'>"
+                }
+              else if (x > 10)  {
+                  document.getElementById("pic1").innerHTML ="<img src='steak.jpg' width='250' height='300' onclick = 'printNo()'>"
+                  document.getElementById("pic2").innerHTML ="<img src='salad.jpg' width='250' height='300' onclick = 'printYes()'>"
+                  document.getElementById("pic3").innerHTML ="<img src='IceCream.jpg' width='250' height='300' onclick = 'printNo()'>"
+                }
+
+
+         }
+         function printYes()
+         {
+           document.getElementById('message').innerHTML = "That was the heathy choice";
+         }
+         function printNo()
+         {
+           document.getElementById('message').innerHTML = "That was not the heathy choice";
+         }
+      </script>
+    </head>
+
+    <body>
+       <h1></h1>
+       <p>This is a program to help you pick the heathest food option.</p>
+       <input type = "text" value = "Type Birth Year" id = "byear">
+       <input type = "button" value = "Submit" onclick = "ageCheck()" id = "sButton">
+       <table>
+   <tr>
+     <td> <p id ="pic1"></p> </td>
+     <td> <p id ="pic2"></p> </td>
+     <td> <p id ="pic3"></p> </td>
+   </tr>
+      </table>
+      <hr><br>
+       <p id = "message"></p><!--Yes or No Message gets sent here-->
+    </body>
+</html>

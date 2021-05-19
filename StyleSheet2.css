@@ -1,0 +1,17 @@
+p{
+  color: white;
+  font-family: Garamond, serif;
+}
+hr{
+color: white;
+}
+h1{
+  font-family: Garamond, serif;
+  color: white;
+}
+body{
+  background: black;
+}
+input:hover {
+  background-color: grey;
+}
